@@ -19,6 +19,7 @@ import { Form3 } from './form3'
 
 import { ToastAction } from "@/components/ui/toast"
 import { useToast } from "@/components/ui/use-toast"
+import { CheckCircle2 } from 'lucide-react';
 
 import axios from "axios";
 
@@ -116,6 +117,9 @@ function App() {
       await form1.trigger('lastName');
       await form1.trigger('address');
     }
+    toast({
+      title: (<div className='flex justify-center items-center'><CheckCircle2 className='mr-2 text-green-500'/><div>Details Saved</div></div>),
+    })
   }
 
   const handleFormSaveAndNext = async (event: React.MouseEvent<HTMLElement>) => {
@@ -151,7 +155,7 @@ function App() {
                 {currentStepIndex == 2 && <div><Form2 form={form1} /></div>}
                 {currentStepIndex == 3 && <div><Form3 form={form1} setValue={form1.setValue}/></div>}
                 <div className='space-x-2 flex justify-end'>
-                  <Button onClick={()=>previousStep()} disabled={isFirstStep} >Back</Button>
+                  <Button onClick={(e)=>{e.preventDefault(); previousStep()}} disabled={isFirstStep} >Back</Button>
                   <Button onClick={handleFormSave}>Save</Button>
                   <Button onClick={handleFormSaveAndNext} disabled={isLastStep}>Save and Next</Button>
                 </div>
