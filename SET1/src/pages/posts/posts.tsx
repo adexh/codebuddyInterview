@@ -1,5 +1,4 @@
 import Post from "./postCard"
-import data from "./posts-data"
 
 export interface IPost {
   id: number
