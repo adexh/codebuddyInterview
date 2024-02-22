@@ -10,7 +10,40 @@ export interface IPost {
   avatar: string
 }
 
-const postsList: IPost[] = data;
+const postsList: IPost[] = [
+  {
+    id: 1,
+    firstName: 'John',
+    lastName: 'Doe',
+    writeup: 'There will be a description',
+    image: 'XXXXXXXXXXXXXXXXXXXXXXXXX',
+    avatar: 'XXXXXXXXXXXXXXXXXXXXXXXXX',
+  },
+  {
+    id: 2,
+    firstName: 'John',
+    lastName: 'Doe',
+    writeup: 'There will be a description',
+    image: 'XXXXXXXXXXXXXXXXXXXXXXXXX',
+    avatar: 'XXXXXXXXXXXXXXXXXXXXXXXXX',
+  },
+  {
+    id: 3,
+    firstName: 'John',
+    lastName: 'Doe',
+    writeup: 'There will be a description',
+    image: 'XXXXXXXXXXXXXXXXXXXXXXXXX',
+    avatar: 'XXXXXXXXXXXXXXXXXXXXXXXXX',
+  },
+  {
+    id: 4,
+    firstName: 'John',
+    lastName: 'Doe',
+    writeup: 'There will be a description',
+    image: 'XXXXXXXXXXXXXXXXXXXXXXXXX',
+    avatar: 'XXXXXXXXXXXXXXXXXXXXXXXXX',
+  }
+];
 
 function posts() {
   return (
